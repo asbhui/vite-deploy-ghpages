@@ -8,10 +8,12 @@
     "dev": "vite",
     "dev:local": "vite",
     "build": "vite build",
+    "build:fanpages": "yarn build --base=/fanpages",
     "lint": "eslint .",
     "preview": "vite preview",
+    "preview:fanpages": "vite preview --base=/fanpages",
     "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build"
+    "predeploy": "yarn build"
   },
   "dependencies": {
     "localforage": "^1.10.0",

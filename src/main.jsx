@@ -16,8 +16,10 @@ import Index from "./routes/index";
 import ReactGA from "react-ga4";
 
 export const container={ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' };
+const basename = import.meta.env.BASE_URL || "/";
 
 ReactGA.initialize(import.meta.env.VITE_GA_MEASUREMENT_ID);
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />} errorElement={<ErrorPage />} loader={rootLoader} action={rootAction}>
@@ -28,7 +30,7 @@ const router = createBrowserRouter(
       <Route path="contacts/:contactId/destroy" action={destroyAction}  errorElement={<div className={container}>Oops! There was an error.</div>}/>
       </Route>
     </Route>
-  ), {basename: "/vite-deploy-ghpages"});
+  ), {basename});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
