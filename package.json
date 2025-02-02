@@ -9,12 +9,12 @@
     "dev": "vite",
     "dev:local": "vite",
     "build": "vite build",
-    "build:fanpages": "yarn build --base=/${basename}",
+    "build:fanpages": "npm run build --base=/${basename}",
     "lint": "eslint .",
     "preview": "vite preview",
     "preview:fanpages": "vite preview --base=/${basename}",
     "deploy": "gh-pages -d dist",
-    "predeploy": "yarn build"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "localforage": "^1.10.0",
@@ -23,7 +23,7 @@
     "react-dom": "^19.0.0",
     "react-ga4": "^2.1.0",
     "react-router-dom": "^7.1.5",
-    "sort-by": "^1.2.0"
+    "sort-by": "^0.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

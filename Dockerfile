@@ -1,8 +1,8 @@
 FROM node:20 AS node-builder
 WORKDIR /app
 COPY . .
-RUN yarn install
-RUN yarn build
+RUN npm ci
+RUN npm run build
 
 FROM nginx:alpine
 COPY --from=node-builder /app/dist /usr/share/nginx/html
