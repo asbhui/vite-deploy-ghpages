@@ -4,14 +4,15 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "basename": "fanpages",
   "scripts": {
     "dev": "vite",
     "dev:local": "vite",
     "build": "vite build",
-    "build:fanpages": "yarn build --base=/fanpages",
+    "build:fanpages": "yarn build --base=/${basename}",
     "lint": "eslint .",
     "preview": "vite preview",
-    "preview:fanpages": "vite preview --base=/fanpages",
+    "preview:fanpages": "vite preview --base=/${basename}",
     "deploy": "gh-pages -d dist",
     "predeploy": "yarn build"
   },
