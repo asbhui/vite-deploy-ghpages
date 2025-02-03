@@ -1,4 +1,4 @@
-FROM node:20 AS node-builder
+FROM node:20-slim AS node-builder
 WORKDIR /app
 COPY . .
 RUN npm ci
